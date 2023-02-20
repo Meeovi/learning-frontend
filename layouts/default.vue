@@ -8,7 +8,7 @@
       </template>
       
       <v-app-bar-title><a class="logobrand" href="/">
-          <v-icon start icon="fas fa-hurricane"></v-icon>Logo
+          <v-icon start icon="fas fa-graduation-cap"></v-icon>Meeovi Learning
         </a></v-app-bar-title>
 
       <v-text-field density="compact" variant="solo" label="Search" append-inner-icon="fas fa-search" single-line
@@ -58,7 +58,7 @@
       <v-card>
         <v-layout>
           <v-navigation-drawer class="sidebarSection" v-model="drawer" temporary>
-            <v-list-item prepend-avatar="https://randomuser.me/api/portraits/men/85.jpg" title="John Leider" nav>
+            <v-list-item prepend-icon="fas fa-user-circle" title="Profile" nav>
               <template v-slot:append>
                 <v-btn variant="text" icon="fas fa-chevron-left" @click.stop="rail = !rail"></v-btn>
               </template>
@@ -66,15 +66,19 @@
 
             <v-list density="compact" nav>
               <v-list-item prepend-icon="fas fa-home" title="Home" value="home" href="/"></v-list-item>
-              <v-list-group prepend-icon="fas fa-feather-pointed" value="content manager">
+              <v-list-item prepend-icon="fas fa-person-chalkboard" title="Courses" value="Courses" href="/Product/"></v-list-item>
+              <v-list-item prepend-icon="fas fa-school" title="Schools" value="Schools" href="/School/"></v-list-item>
+              <v-list-item prepend-icon="fas fa-users-viewfinder" title="Newsfeed" value="newsfeed" href="/Social/newsfeed"></v-list-item>
+              <v-list-item prepend-icon="fas fa-users" title="Group" value="Group" href="/Social/Group"></v-list-item>
+              <v-list-item prepend-icon="fas fa-chalkboard" title="Digiboards" value="Digiboards" href="/School/Digiboards"></v-list-item>
+              <v-list-item prepend-icon="fas fa-users-rectangle" title="Teach" value="Teach" href="/About/Teach"></v-list-item>
+              <v-list-group prepend-icon="fas fa-feather-pointed" value="categories">
                 <template v-slot:activator="{ props }">
-                  <v-list-item v-bind="props" title="Content Manager"></v-list-item>
+                  <v-list-item v-bind="props" title="Categories"></v-list-item>
                 </template>
                 <v-list-item prepend-icon="fas fa-feather" title="Blog" value="Blog" href="/Admin/Content/Blog">
                 </v-list-item>
               </v-list-group>
-              <v-list-item prepend-icon="fas fa-user" title="Customers" value="Customers" href="/Admin/Customers">
-              </v-list-item>
               <v-list-item prepend-icon="fas fa-gear" title="Settings" value="settings"
                 href="/Admin/Settings/general-settings"></v-list-item>
             </v-list>
